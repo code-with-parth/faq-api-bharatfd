@@ -12,11 +12,7 @@
    ```
 
 3. **Set Up Environment Variables**:
-   Create a 
-
-.env
-
- file in the root of your project and add the following environment variables:
+   Create a .env file in the root of your project and add the following environment variables:
    ```properties
    PORT=3000
    MONGO_URI=mongodb://localhost:27017/faqdb

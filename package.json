@@ -1,0 +1,51 @@
+{
+    "name": "faq-management-system",
+    "version": "1.0.0",
+    "description": "A FAQ management system with multi-language support",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js",
+        "test": "mocha --exit",
+        "lint": "eslint .",
+        "refresh-translations": "node scripts/refreshTranslations.js"
+    },
+    "dependencies": {
+        "@vitalets/google-translate-api": "^7.0.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.1",
+        "express-rate-limit": "^5.2.6",
+        "express-validator": "^6.10.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.12.3",
+        "redis": "^4.7.0",
+        "winston": "^3.3.3"
+    },
+    "devDependencies": {
+        "chai": "^4.3.4",
+        "chai-http": "^4.3.0",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-plugin-import": "^2.24.2",
+        "mocha": "^8.3.2",
+        "nodemon": "^2.0.7"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/faq-management-system.git"
+    },
+    "keywords": [
+        "faq",
+        "management",
+        "multilingual",
+        "express",
+        "mongodb",
+        "redis"
+    ],
+    "author": "Your Name",
+    "license": "MIT"
+}

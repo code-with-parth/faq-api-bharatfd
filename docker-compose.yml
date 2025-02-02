@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    build: .62v4hRoFDMYzktSlksZAODZi71CEKs6s
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/faqdb
+      - REDIS_URL=REDIS_URL=redis://redis:6379
+      - JWT_SECRET=hwqihrhwe
+    depends_on:
+      - mongo
+      - redis
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"

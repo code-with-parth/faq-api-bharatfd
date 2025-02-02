@@ -1,0 +1,39 @@
+<%- include('layout') %>
+
+<div class="container">
+    <h3 class="center-align"><%= faq ? 'Edit' : 'Create' %> FAQ</h3>
+
+    <div class="row">
+        <form action="/admin/faq" method="POST" class="col s12">
+            <% if (faq) { %>
+                <input type="hidden" name="id" value="<%= faq._id %>">
+            <% } %>
+
+            <div class="input-field">
+                <input type="text" name="question" id="question" value="<%= faq ? faq.question : '' %>" required>
+                <label for="question">Question</label>
+            </div>
+
+            <div class="input-field">
+                <textarea name="answer" id="answer" class="materialize-textarea" required><%= faq ? faq.answer : '' %></textarea>
+                <label for="answer">Answer</label>
+            </div>
+
+            <div class="right-align">
+                <a href="/admin" class="btn-flat waves-effect">Cancel</a>
+                <button type="submit" class="btn waves-effect waves-light">
+                    <%= faq ? 'Update' : 'Create' %> FAQ
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        M.updateTextFields(); // Ensure labels float correctly
+        M.textareaAutoResize(document.querySelector('.materialize-textarea'));
+    });
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create FAQ</title>
+    <!-- Materialize CSS (Material UI for HTML) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body class="container">
+    <h3 class="center-align">Create New FAQ</h3>
+
+    <div class="row">
+        <form action="/admin/create" method="POST" class="col s12">
+            <div class="input-field">
+                <input type="text" id="question" name="question" required>
+                <label for="question">Question</label>
+            </div>
+
+            <div class="input-field">
+                <textarea id="answer" name="answer" class="materialize-textarea" required></textarea>
+                <label for="answer">Answer</label>
+            </div>
+
+            <button type="submit" class="btn waves-effect waves-light">Create FAQ</button>
+        </form>
+    </div>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

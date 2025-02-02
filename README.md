@@ -2,8 +2,8 @@
 
 1. **Clone the Repository**:
    ```sh
-   git clone https://github.com/yourusername/faq-management-system.git
-   cd faq-management-system
+   git clone https://github.com/code-with-parth/faq-api-bharatfd.git
+   cd faq-api-bharatfd
    ```
 
 2. **Install Dependencies**:
